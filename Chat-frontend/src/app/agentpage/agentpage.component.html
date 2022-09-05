@@ -1,0 +1,91 @@
+
+<div>
+
+    <!-- <button id="btnDugme"   color="primary" type="submit" style="padding: 12px 32px; margin-right: 20px;" >Dugme</button>
+    <br>
+    <label style="padding-right: 10px;color: black;">Labela</label>
+    <br>
+    <input matInput  style="height: 40%;" name="c2" type="text"/> -->
+    <br>
+    <label style="padding-right: 10px;color: black;">Message</label>
+    <input matInput  style="height: 40%;" name="c1" type="text" [(ngModel)] = "message"/>
+    <br>
+    
+
+    <label style="padding-right: 10px;color: black;">Performative</label>
+    <input matInput  style="height: 40%;" name="c2" type="text" [(ngModel)] = "performative"/>
+    <br>
+
+
+    <label style="padding-right: 10px;color: black;">Name</label>
+    <input matInput  style="height: 40%;" name="c3" type="text" [(ngModel)] = "agentName"/>
+    <br>
+
+    <label style="padding-right: 10px;color: black;">Type</label>
+    <input matInput  style="height: 40%;" name="c4" type="text" [(ngModel)] = "agentType"/>
+    <br>
+
+    <label style="padding-right: 10px;color: black;">Store</label>
+    <input matInput  style="height: 40%;" name="c4" type="text" [(ngModel)] = "store"/>
+    <br>
+    <label style="padding-right: 10px;color: black;">Author</label>
+    <input matInput  style="height: 40%;" name="c4" type="text" [(ngModel)] = "authore"/>
+    <br>
+
+    <label style="padding-right: 10px;color: black;">Title</label>
+    <input matInput  style="height: 40%;" name="c4" type="text" [(ngModel)] = "title"/>
+    <br>
+    <br>
+
+    <button id="btnDugme"   color="primary" style="padding: 2px 2px; margin-right: 20px; height: 30px;width: 50px;" (click)="send()">Send</button>
+    <button id="btnDugme2"   color="primary" style="padding: 2px 2px; margin-right: 20px; height: 30px;width: 50px;"  (click)="startAgent()">Start</button>
+    <button id="btnDugme3"   color="primary" style="padding: 2px 2px; margin-right: 20px; height: 30px;width: 50px;"  (click)="stopAgent()">Send</button>
+
+
+</div>
+<h3>Agent types:</h3>
+<table style="border: solid black 2px;">
+
+    <tr>
+     <th>Type</th> 
+    <th>Statefull</th>
+    </tr>
+    <tr *ngFor="let t of this.displayedTypes">
+        <td>{{t.type}}</td>
+        <td>{{t.statefull}}</td>
+    </tr>
+       
+</table>
+
+
+
+<h3>Agents:</h3>
+<table style="border: solid black 2px;">
+
+    <tr>
+     <th>Name</th> 
+    <th>Type</th>
+    </tr>
+    <tr *ngFor="let t of this.displayedAgents">
+        <td>{{t.name}}</td>
+        <td>{{t.type}}</td>
+    </tr>
+       
+</table>
+
+
+
+
+
+
+
+
+<h3>Performatives:</h3>
+<table  style="border: solid black 2px;">
+
+    <tr> <th>Name</th> </tr>
+    <tr *ngFor="let perf of this.displayedPerformatives">
+        <td>{{perf.name}}</td>
+    </tr>
+       
+</table>
